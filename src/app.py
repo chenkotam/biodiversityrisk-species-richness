@@ -17,11 +17,11 @@ from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 
 
-PROJECT_PATH = '/Users/zt237/Dropbox/Xuran_Joe/Biodiversity/Datasets/Species'
-df_county_all = pd.read_csv(os.path.join(PROJECT_PATH, "dta/species_county_all.csv"))
-df_county_marine = pd.read_csv(os.path.join(PROJECT_PATH, "dta/species_county_marine.csv"))
-df_county_terrestial = pd.read_csv(os.path.join(PROJECT_PATH, "dta/species_county_terrestial.csv"))
-df_county_freshwater = pd.read_csv(os.path.join(PROJECT_PATH, "dta/species_county_freshwater.csv"))
+PROJECT_PATH = '../'
+df_county_all = pd.read_csv(os.path.join(PROJECT_PATH, "data/species_county_all.csv"))
+df_county_marine = pd.read_csv(os.path.join(PROJECT_PATH, "data/species_county_marine.csv"))
+df_county_terrestial = pd.read_csv(os.path.join(PROJECT_PATH, "data/species_county_terrestial.csv"))
+df_county_freshwater = pd.read_csv(os.path.join(PROJECT_PATH, "data/species_county_freshwater.csv"))
 df_county_all['US_County_FIPS'] = df_county_all['US_County_FIPS'].apply(lambda x: f"{x:05d}")
 df_county_marine['US_County_FIPS'] = df_county_marine['US_County_FIPS'].apply(lambda x: f"{x:05d}")
 df_county_terrestial['US_County_FIPS'] = df_county_terrestial['US_County_FIPS'].apply(lambda x: f"{x:05d}")
