@@ -1,10 +1,17 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Apr 15 14:32:36 2023
+'''
+File: app.py
+Project: Biodiversity - Visualize Species Count by Country/County
 
-@author: zt237
-"""
+File Created: Tuesday, 15th April 2023 10:06:00 am
+
+Author: Zhenhao Tan (zhenhao.tan@yale.edu)
+-----
+Last Modified: Tuesday, 18th April 2023 9:30:00 am
+-----
+Description: This file visualize the species count using plotly dash app. This
+is deployed using render through the github commit. This file is generally the
+same as 3_species_cnt_visualize.py
+'''
 
 import os
 import pandas as pd
@@ -132,13 +139,14 @@ app.layout = dbc.Container([
                         {'label': 'Freshwater', 'value': 'freshwater'},
                     ],
                     value=initial_dataset,
-                    inline=True
+                    inline=True,
+                    labelStyle={'display': 'inline-block', 'margin-left': '20px'}
                 )),
             ]),
-            dcc.Graph(id='choropleth', figure=fig, style={'width': '60vw', 'height': '80vh'})
-        ], width=8),
+            dcc.Graph(id='choropleth', figure=fig, style={'width': '70vw', 'height': '60vh'})
+        ], width=6),
     ]),
-])
+], style={'marginLeft': '50px', 'marginTop': '20px'})
 
 
 # Define the app callback
