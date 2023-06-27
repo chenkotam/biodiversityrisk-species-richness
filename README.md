@@ -12,6 +12,9 @@ Examples:
 - Number of Threatened Species of Mammalia - County Level
 ![My Image](gph/mammalia_speciesthreatened.png)
 
+- Threatened Species Ratio of Mammalia - County Level
+![My Image](gph/mammalia_speciesratio.png)
+
 Notes:
 - Species data are based on the IUCN Red List of Threatened Species
 - Selection of multiple species classes is available (check the boxes)
